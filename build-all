@@ -1,0 +1,3 @@
+#!/bin/bash
+set -ex
+find -maxdepth 1 -mindepth 1 -type d -name "fwd*" -exec ./build {} \;
