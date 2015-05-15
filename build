@@ -2,4 +2,4 @@
 set -ex
 [ -z "$1" ] && { echo "missing target"; exit 1; }
 NAME=${1%/}
-docker build -t $NAME $(readlink -f $NAME)
+docker build --pull -t $NAME $(readlink -f $NAME)
