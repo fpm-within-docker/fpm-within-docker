@@ -19,7 +19,9 @@ RUN yum clean metadata && yum -y update
 RUN yum -y install python-devel libffi-devel
 ```
 
-And in the same dir create a script to be run inside the container, something like
+The *yum install* line (but it would be the same for apt-get) is the same as your *BuildRequires* in an RPM specfile (or *Build-Depends* for DEB).
+
+And in the same dir create a script to be run inside the container, something like:
 
 ```
 #!/bin/bash
@@ -36,7 +38,7 @@ chmod 666 *
 ```
 
 In this example, */application* is where the sources of your app get bindmounted, while */build* is where the output deb/rpm is saved.
-The application gets installed in /opt. You should specify all the runtime dependencies in the fpm invocation.
+The application gets installed in /opt. You should specify all the runtime dependencies in the fpm invocation - those are the same as *Requires* in a RPM specfile, or *Depends* for a DEB package.
 
 Then create the build image and use it to build your package (assuming your sources are in the current dir):
 
@@ -60,7 +62,5 @@ alanfranz/fwd-ubuntu-utopic
 alanfranz/fwd-ubuntu-vivid
 alanfranz/fwd-debian-wheezy
 alanfranz/fwd-debian-jessie
-
-
 ```
 
