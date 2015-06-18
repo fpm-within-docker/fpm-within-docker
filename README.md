@@ -55,7 +55,6 @@ alanfranz/fwd-fedora-rawhide
 alanfranz/fwd-fedora-22
 alanfranz/fwd-centos-6
 alanfranz/fwd-centos-7
-alanfranz/fwd-centos-7
 alanfranz/fwd-ubuntu-precise
 alanfranz/fwd-ubuntu-trusty
 alanfranz/fwd-ubuntu-utopic
