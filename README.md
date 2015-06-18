@@ -44,3 +44,23 @@ Then create the build image and use it to build your package (assuming your sour
 docker build --pull -t myapplication-build build-directory
 docker run --rm -v $(pwd):/application:ro -v $(pwd)/out:/build -w /application myapplication-build /application/build-directory/make-package.sh 1.2.3
 ```
+## Using the images
+
+They're available on Docker hub. All of them are just tagged **latest**.
+
+```
+alanfranz/fwd-fedora-rawhide
+alanfranz/fwd-fedora-22
+alanfranz/fwd-centos-6
+alanfranz/fwd-centos-7
+alanfranz/fwd-centos-7
+alanfranz/fwd-ubuntu-precise
+alanfranz/fwd-ubuntu-trusty
+alanfranz/fwd-ubuntu-utopic
+alanfranz/fwd-ubuntu-vivid
+alanfranz/fwd-debian-wheezy
+alanfranz/fwd-debian-jessie
+
+
+```
+
