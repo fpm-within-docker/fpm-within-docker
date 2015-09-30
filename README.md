@@ -34,7 +34,7 @@ cd /tmp/myapplication
 make clean all install PREFIX=/opt/myapplication
 cd /build
 fpm -t rpm -s dir -n dorkbox --version "$1" --depends something --depends somethingelse -C / opt
-chmod 666 *
+chown -R --reference /application/make-package.sh .
 ```
 
 In this example, */application* is where the sources of your app get bindmounted, while */build* is where the output deb/rpm is saved.
