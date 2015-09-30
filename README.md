@@ -19,7 +19,7 @@ RUN yum clean metadata && yum -y update
 RUN yum -y install python-devel libffi-devel
 ```
 
-The *yum install* line (but it would be the same for apt-get) is the same as your *BuildRequires* in an RPM specfile (or *Build-Depends* for DEB).
+The *yum install* line (but it would be the same for apt-get) is the same as your *BuildRequires* in an RPM specfile (or *Build-Depends* for DEB): it should install the *prerequisites* for doing the build (e.g. compilers, headers, etc)
 
 And in the same dir create a script to be run inside the container, something like:
 
