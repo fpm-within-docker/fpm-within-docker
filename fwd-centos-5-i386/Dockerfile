@@ -10,3 +10,5 @@ COPY ruby-1.9.3-p551.tar.gz /root/rpmbuild/SOURCES/
 RUN cd /root/rpmbuild/SPECS ; linux32 rpmbuild -bb ruby193.spec
 RUN linux32 yum -y --nogpgcheck localinstall /root/rpmbuild/RPMS/i386/*.rpm
 RUN LD_LIBRARY_PATH=/opt/ruby193/lib linux32 /opt/ruby193/bin/gem install fpm -v 1.3.3
+COPY fpm /usr/bin/
+
