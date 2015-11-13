@@ -46,20 +46,23 @@ Then create the build image and use it to build your package (assuming your sour
 docker build --pull -t myapplication-build build-directory
 docker run --rm -v $(pwd):/application:ro -v $(pwd)/out:/build -w /application myapplication-build /application/build-directory/make-package.sh 1.2.3
 ```
+
+## Limitations
+
+Currently the images are x86_64 only. There's an exception for
+centos5 i386, since I had an actual use case, but its creation
+was very tedious, and docker doesn't officially endorse 32 bit guests.
+
+I'll add 32 bit images only if help is provided.
+
 ## Using the images
 
 They're available on Docker hub. All of them are just tagged **latest**.
+I'll usually add images for Centos, Fedora, Ubuntu and Debian as soon
+as they get out, and I'll try supporting them as long as they're supported upstream.
 
-```
-alanfranz/fwd-fedora-rawhide
-alanfranz/fwd-fedora-22
-alanfranz/fwd-centos-6
-alanfranz/fwd-centos-7
-alanfranz/fwd-ubuntu-precise
-alanfranz/fwd-ubuntu-trusty
-alanfranz/fwd-ubuntu-utopic
-alanfranz/fwd-ubuntu-vivid
-alanfranz/fwd-debian-wheezy
-alanfranz/fwd-debian-jessie
-```
+Take a look at the repository; all the directories starting with *fwd* are the sources
+for their respective images, which can be found on [my page on Docker Hub](https://hub.docker.com/u/alanfranz/)
 
+All images are tagged "latest"; so, for Centos 7 you'd use the **alanfranz/fwd-centos-7:latest**
+docker image.
