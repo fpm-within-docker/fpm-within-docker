@@ -5,50 +5,22 @@ Pre-baked images for package building. [fpm](https://github.com/jordansissel/fpm
 ## what does this do?
 
 If you don't want to spend your nights in learning packaging an RPM or a DEB - which is a good idea - FPM can help.
-
 But, out of the box, fpm doesn't provide a "sandbox" or any other "isolated environment" for building. Here comes this set of images.
+
+You should still know something about package building.
+
+For RPM see [Maximum RPM](http://www.rpm.org/max-rpm/), [Fedora RPM Howto](https://fedoraproject.org/wiki/How_to_create_an_RPM_package), or [Fedora RPM Guide](https://docs.fedoraproject.org/en-US/Fedora_Draft_Documentation/0.1/html/RPM_Guide/).
+
+For DEB, see [Debian How To Package](https://wiki.debian.org/HowToPackageForDebian) or [Ubuntu Packaging New Software](http://packaging.ubuntu.com/html/packaging-new-software.html).
+
+You'd better know what [docker](https://www.docker.com/) is, as well.
 
 ## Usage
 
-Take a look at the example in the [example usage](tree/master/example-usage) directory - it's an example build of [GNU Wget](https://savannah.gnu.org/git/?group=wget)
-for Centos7 and Ubuntu Trusty.
+Take a look at the example in the [example project](tree/master/example-project) directory - it's an example build of a [lua interpreter](http://www.lua.org)
+for Centos7 and Ubuntu Trusty. The files are commented to let you understand what happens when building and testing the package.
 
-In a directory, let's call it *build-directory*, create a new Dockerfile that inherits from the one for the distro you need and installs your build dependencies, e.g.:
-
-```
-FROM alanfranz/fwd-centos-7:latest
-MAINTAINER Alan Franzoni <username@franzoni.eu>
-RUN yum clean metadata && yum -y update
-RUN yum -y install python-devel libffi-devel
-```
-
-The *yum install* line (but it would be the same for apt-get) is the same as your *BuildRequires* in an RPM specfile (or *Build-Depends* for DEB): it should install the *prerequisites* for doing the build (e.g. compilers, headers, etc). While you *could* do such install in the script below, you don't want to, since the build requirements can usually be cached, something that docker does wonderfully.
-
-And in the same dir create a script to be run inside the container, something like:
-
-```make-package.sh
-#!/bin/bash
-set -ex
-[ -n "$1" ]
-mkdir -p /opt
-cd /application
-rsync -av --filter=':- .gitignore' --exclude='.git' . /tmp/myapplication
-cd /tmp/myapplication
-make clean all install PREFIX=/opt/myapplication
-cd /build
-fpm -t rpm -s dir -n dorkbox --version "$1" --depends something --depends somethingelse -C / opt
-chown -R --reference /application/make-package.sh .
-```
-
-In this example, */application* is where the sources of your app get bindmounted, while */build* is where the output deb/rpm is saved.
-The application gets installed in /opt. You should specify all the runtime dependencies in the fpm invocation - those are the same as *Requires* in a RPM specfile, or *Depends* for a DEB package.
-
-Then create the build image and use it to build your package (assuming your sources are in the current dir):
-
-```
-docker build --pull -t myapplication-build build-directory
-docker run --rm -v $(pwd):/application:ro -v $(pwd)/out:/build -w /application myapplication-build /application/build-directory/make-package.sh 1.2.3
-```
+The main build scripts are commented and will tell you what you should know: see [build for centos 7](tree/master/example-project/packaging/centos-7/build) and [build for ubuntu trusty](tree/master/example-project/packaging/ubuntu-trusty/build)
 
 ## Limitations
 
@@ -58,7 +30,7 @@ was very tedious, and docker doesn't officially endorse 32 bit guests.
 
 I'll add 32 bit images only if help is provided.
 
-## Using the images
+## Using the fpm-within-docker images
 
 They're available on Docker hub. All of them are just tagged **latest**.
 I'll usually add images for Centos, Fedora, Ubuntu and Debian as soon
@@ -69,4 +41,3 @@ for their respective images, which can be found on [my page on Docker Hub](https
 
 All images are tagged "latest"; so, for Centos 7 you'd use the **alanfranz/fwd-centos-7:latest**
 docker image.
-
