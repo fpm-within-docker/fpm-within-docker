@@ -10,6 +10,9 @@ But, out of the box, fpm doesn't provide a "sandbox" or any other "isolated envi
 
 ## Usage
 
+Take a look at the example in the [example usage](tree/master/example-usage) directory - it's an example build of [GNU Wget](https://savannah.gnu.org/git/?group=wget)
+for Centos7 and Ubuntu Trusty.
+
 In a directory, let's call it *build-directory*, create a new Dockerfile that inherits from the one for the distro you need and installs your build dependencies, e.g.:
 
 ```
@@ -66,3 +69,4 @@ for their respective images, which can be found on [my page on Docker Hub](https
 
 All images are tagged "latest"; so, for Centos 7 you'd use the **alanfranz/fwd-centos-7:latest**
 docker image.
+
