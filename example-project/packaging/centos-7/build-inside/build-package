@@ -16,4 +16,5 @@ cd /out
 # this is a standard fpm command. look at fpm's own help. The only thing that I like to do
 # is installing all the things in a separate dir to prevent listing all the files - but it's
 # just personal taste.
+# don't forget to list all runtime dependencies for your package (i.e. all the shared libraries you link to!)
 fpm -t rpm -s dir -n mylua --version ${VERSION} --description "my version of lua" --depends readline -C / /usr/local/lua
