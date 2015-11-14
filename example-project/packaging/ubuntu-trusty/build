@@ -29,7 +29,7 @@ docker run --env-file ../env.list --rm -v $(pwd)/build-inside:/build-inside:ro -
 # now we have the built package in out/. let's start the test phase.
 # we build the test image. It should be a very minimal image, in order to check that all the deps are properly set.
 # possibly it could be a totally empty image; but I prefer making it clear that it's this way.
-# feel free to omit the test-image directory and set TEST_IMAGE to something you like (e.g. centos:7)
+# feel free to omit the test-image directory and set TEST_IMAGE to something you like (e.g. ubuntu:trusty)
 docker build --pull -t ${TEST_IMAGE} test-image
 
 rm -rf test-logs
