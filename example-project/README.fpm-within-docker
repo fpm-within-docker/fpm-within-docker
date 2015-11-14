@@ -1,0 +1,5 @@
+This is the lua 5.3.1 source code and tests from www.lua.org.
+
+All rights reserved to the holders with their own license.
+
+Only the "packaging" directory is subject to fpm-within-docker's own license.
