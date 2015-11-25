@@ -20,6 +20,13 @@ You'd better know what [docker](https://www.docker.com/) is, as well.
 Take a look at the example in the [example project](example-project) directory - it's an example build of a [lua interpreter](http://www.lua.org)
 for Centos7 and Ubuntu Trusty. The directory contains the extracted source of lua 5.3.1, while the [packaging](example-project/packaging) dir contains our build scripts. The main build scripts are commented and will tell you what you should know: see [build for centos 7](example-project/packaging/centos-7/build) and [build for ubuntu trusty](example-project/packaging/ubuntu-trusty/build)
 
+The build chain goes something like this:
+
+* first, a build-image is constructed via docker. That usually inherits from an fpm-within-docker image.
+* Then, a build script is run into that image. Such build script can access the software source, which is usually employed to build and install the software; then fpm is invoked to package it.
+* After that, a test-image is constructed via docker. That doesn't inherit from an fpm-within-docker image; an image as bare as possible should be used.
+* As a last step, a test script is invoked. Such script should install the package that was just built and run the test suite for the software, which can then be tested in an environment very close to actual scenario. This is especially useful to detect issues with missing or broken dependencies.
+
 ## Limitations
 
 Currently the images are x86_64 only. There's an exception for
