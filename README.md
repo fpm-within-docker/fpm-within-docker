@@ -20,7 +20,7 @@ You'd better know what [docker](https://www.docker.com/) is, as well.
 Take a look at the example in the [example project](example-project) directory - it's an example build of a [lua interpreter](http://www.lua.org)
 for Centos7 and Ubuntu Trusty. The files are commented to let you understand what happens when building and testing the package.
 
-The main build scripts are commented and will tell you what you should know: see [build for centos 7](tree/master/example-project/packaging/centos-7/build) and [build for ubuntu trusty](tree/master/example-project/packaging/ubuntu-trusty/build)
+The main build scripts are commented and will tell you what you should know: see [build for centos 7](example-project/packaging/centos-7/build) and [build for ubuntu trusty](example-project/packaging/ubuntu-trusty/build)
 
 ## Limitations
 
