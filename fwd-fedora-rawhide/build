@@ -1,0 +1,3 @@
+#!/bin/bash -ex
+NAME="$(basename $(pwd))"
+docker build --pull -t "$NAME" .
