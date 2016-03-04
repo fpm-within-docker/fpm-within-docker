@@ -44,5 +44,19 @@ as they get out, and I'll try supporting them as long as they're supported upstr
 Take a look at the repository; all the directories starting with *fwd* are the sources
 for their respective images, which can be found on [my page on Docker Hub](https://hub.docker.com/u/alanfranz/)
 
-All images are tagged "latest"; so, for Centos 7 you'd use the **alanfranz/fwd-centos-7:latest**
-docker image.
+All images are tagged "latest" and are x86_64 unless otherwise noted. i386 images are
+unsupported and experimental.
+
+Image list:
+
+* alanfranz/fwd-centos-5-i386:latest
+* alanfranz/fwd-centos-6:latest
+* alanfranz/fwd-centos-7:latest
+* alanfranz/fwd-debian-jessie:latest
+* alanfranz/fwd-debian-wheezy:latest
+* alanfranz/fwd-fedora-22:latest
+* alanfranz/fwd-fedora-23:latest
+* alanfranz/fwd-fedora-rawhide:latest
+* alanfranz/fwd-ubuntu-precise:latest
+* alanfranz/fwd-ubuntu-trusty:latest
+* alanfranz/fwd-ubuntu-wily:latest
