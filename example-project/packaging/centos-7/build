@@ -8,6 +8,17 @@ CURRENT_DISTRO=$(basename $(pwd))
 BUILD_IMAGE="lua-${CURRENT_DISTRO}-build"
 TEST_IMAGE="lua-${CURRENT_DISTRO}-test"
 
+# signature keys. if you don't need to sign your RPMs, you can omit those
+# parameters altogether. They're set as env variables to work both in test
+# and production; feel free to set them as you need.
+# the private key file should be a gpg ascii-armored, not password protected secret key file.
+# the public key file should be a gpg ascii-armored public key file.
+PUBLIC_KEY_FILE=$(readlink -f "${PUBLIC_KEY_FILE:-../public.asc}")
+PRIVATE_KEY_FILE=$(readlink -f "${PRIVATE_KEY_FILE:-../private.key}")
+[ -r "${PUBLIC_KEY_FILE}" ]
+[ -r "${PRIVATE_KEY_FILE}" ]
+# signature keys end
+
 # create the build image from the provided directory
 docker build --pull -t ${BUILD_IMAGE} build-image
 
@@ -23,7 +34,11 @@ rm -rf out
 # the env.list file is a good shortcut for sharing env variable that may be reused from various packages,
 # but you can choose to forward additional variables with the --env switch. It's quite common to forward
 # things like BUILD_NUMBER or GIT_COMMIT from a CI server to use them within the package.
-docker run --env-file ../env.list --rm -v $(pwd)/build-inside:/build-inside:ro -v ${SRC_DIR}:/source:ro -v $(pwd)/out:/out -w /build-inside ${BUILD_IMAGE} /build-inside/build-package
+#
+# you can omit the PRIVATE_KEY_FILE line if you don't need signing your packages.
+docker run --env-file ../env.list --rm -v $(pwd)/build-inside:/build-inside:ro -v ${SRC_DIR}:/source:ro -v $(pwd)/out:/out \
+	-v "${PRIVATE_KEY_FILE}":/tmp/private.key:ro \
+	-w /build-inside ${BUILD_IMAGE} /build-inside/build-package \
 
 
 
@@ -31,11 +46,15 @@ docker run --env-file ../env.list --rm -v $(pwd)/build-inside:/build-inside:ro -
 # we build the test image. It should be a very minimal image, in order to check that all the deps are properly set.
 # possibly it could be a totally empty image; but I prefer making it clear that it's this way.
 # feel free to omit the test-image directory and set TEST_IMAGE to something you like (e.g. centos:7)
+# if you want to verify proper signing of your RPMs, make sure 'localpkg_gpgcheck=1' is set in yum.conf / dnf.conf
 docker build --pull -t ${TEST_IMAGE} test-image
 
 rm -rf test-logs
 # we retain the env file, even though we might not need it. The out directory is actually readonly,
 # because we don't need to modify it. We create a test-logs directory which is writeable by the
 # container if we want to add test logs.
-docker run --env-file ../env.list --rm -v $(pwd)/test-inside:/test-inside:ro -v $(pwd)/out:/out:ro -v $(pwd)/test-logs:/test-logs -w /test-inside ${TEST_IMAGE} /test-inside/test || { echo "ERROR: the test phase failed." ; exit 1 ; }
+# you can omit the PUBLIC_KEY_FILE part if you don't need verifying the signature of your packages.
+docker run --env-file ../env.list --rm -v $(pwd)/test-inside:/test-inside:ro -v $(pwd)/out:/out:ro -v $(pwd)/test-logs:/test-logs \
+	-v "${PUBLIC_KEY_FILE}":/tmp/public.asc:ro \
+	-w /test-inside ${TEST_IMAGE} /test-inside/test || { echo "ERROR: the test phase failed." ; rm -f "test-inside/${PUBLIC_KEY_FILE}" ; exit 1 ; }
 echo "Test phase succeeded."

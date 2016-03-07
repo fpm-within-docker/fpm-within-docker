@@ -4,6 +4,9 @@
 # to delete them from our host.
 trap 'chown -R --reference /test-inside/test /test-logs/' EXIT
 
+#must import public key
+rpm --import /tmp/public.asc
+
 yum -y install /out/*.rpm
 
 cd /usr/local/lua/tests

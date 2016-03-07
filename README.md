@@ -60,3 +60,12 @@ Image list:
 * alanfranz/fwd-ubuntu-precise:latest
 * alanfranz/fwd-ubuntu-trusty:latest
 * alanfranz/fwd-ubuntu-wily:latest
+
+## Signing RPMs
+
+Fpm supports signing rpms, but there's a minimum of setup involved; check the [build for centos 7](example-project/packaging/centos-7/build) to see 
+how it's done. You can both sign and verify the signature is OK.
+
+DEB packages are signed in the repository only, so no issue while building.
+
+

@@ -12,9 +12,22 @@ cd source
 make INSTALL_TOP=/usr/local/lua linux install
 mv tests /usr/local/lua
 
+# signing block. can be omitted if you don't need to sign your RPMs.
+gpg --import /tmp/private.key
+[[ $(gpg --list-secret-keys) =~ uid(.*) ]]
+KEYNAME="${BASH_REMATCH[1]}"
+[ -n "${KEYNAME}" ] || { echo "could not find key for signing purpose"; exit 1; }
+echo -e "%_gpg_name ${KEYNAME}\n%_signature gpg\n" > ${HOME}/.rpmmacros
+# signing block end
+
 cd /out
 # this is a standard fpm command. look at fpm's own help. The only thing that I like to do
 # is installing all the things in a separate dir to prevent listing all the files - but it's
 # just personal taste.
 # don't forget to list all runtime dependencies for your package (i.e. all the shared libraries you link to!)
-fpm -t rpm -s dir -n mylua --version ${VERSION} --description "my version of lua" --depends readline -C / /usr/local/lua
+# the --rpmsign flag can be omitted if you don't need signing your package.
+# the "setsid" magic is used to prevent rpmsign asking for a password.
+echo -e "\n" | setsid fpm -t rpm -s dir -n mylua --rpm-sign --version ${VERSION} --description "my version of lua" --depends readline -C / /usr/local/lua
+
+#this would be the no-signature command line
+# fpm -t rpm -s dir -n mylua --version ${VERSION} --description "my version of lua" --depends readline -C / /usr/local/lua
