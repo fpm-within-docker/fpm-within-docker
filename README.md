@@ -47,9 +47,6 @@ unsupported and experimental.
 I'll usually add images for Centos, Fedora, Ubuntu and Debian as soon
 as they get out, and I'll try supporting them as long as they're supported upstream.
 
-
-
-
 Image list:
 
 * alanfranz/fwd-centos-5-i386:latest
@@ -70,5 +67,3 @@ Fpm supports signing rpms, but there's a minimum of setup involved; check the [b
 how it's done. You can both sign and verify the signature is OK.
 
 DEB packages are signed in the repository only, so no issue while building.
-
-
