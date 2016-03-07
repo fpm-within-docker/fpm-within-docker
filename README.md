@@ -37,15 +37,18 @@ I'll add 32 bit images only if help is provided.
 
 ## Using the fpm-within-docker images
 
-They're available on Docker hub. All of them are just tagged **latest**.
-I'll usually add images for Centos, Fedora, Ubuntu and Debian as soon
-as they get out, and I'll try supporting them as long as they're supported upstream.
+They're available on Docker hub, so they can be used straight from your docker command line, without the need of rebuilding them locally.
 
-Take a look at the repository; all the directories starting with *fwd* are the sources
-for their respective images, which can be found on [my page on Docker Hub](https://hub.docker.com/u/alanfranz/)
+[fpm-within-docker images on Docker Hub](https://hub.docker.com/search/?isAutomated=0&isOfficial=0&page=1&pullCount=0&q=alanfranz%2Ffwd&starCount=0)
 
 All images are tagged "latest" and are x86_64 unless otherwise noted. i386 images are
 unsupported and experimental.
+
+I'll usually add images for Centos, Fedora, Ubuntu and Debian as soon
+as they get out, and I'll try supporting them as long as they're supported upstream.
+
+
+
 
 Image list:
 
