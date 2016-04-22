@@ -60,6 +60,7 @@ Image list:
 * alanfranz/fwd-ubuntu-precise:latest
 * alanfranz/fwd-ubuntu-trusty:latest
 * alanfranz/fwd-ubuntu-wily:latest
+* alanfranz/fwd-ubuntu-xenial:latest
 
 ## Signing RPMs
 
