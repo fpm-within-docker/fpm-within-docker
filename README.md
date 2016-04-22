@@ -27,6 +27,8 @@ The build chain goes something like this:
 * After that, a test-image is constructed via docker. That doesn't inherit from an fpm-within-docker image; an image as bare as possible should be used.
 * As a last step, a test script is invoked. Such script should install the package that was just built and run the test suite for the software, which can then be tested in an environment very close to actual scenario. This is especially useful to detect issues with missing or broken dependencies.
 
+I suggest you just **copy** the whole packaging directory from the examples to your own project, then you add/remove the various distro-related subdirectories and modify them in place.
+
 ## Limitations
 
 Currently the images are x86_64 only. There's an exception for
