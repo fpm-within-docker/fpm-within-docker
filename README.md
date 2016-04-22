@@ -1,6 +1,6 @@
 # fpm-within-docker
 
-Pre-baked images for package building. [fpm](https://github.com/jordansissel/fpm) is included!
+Pre-baked images for RPM and DEB package building. [fpm](https://github.com/jordansissel/fpm) is included!
 
 ## what does this do?
 
