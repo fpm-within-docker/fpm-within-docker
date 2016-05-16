@@ -4,7 +4,7 @@ COPY 80-acquire-retries /etc/apt/apt.conf.d/
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv A1D267C030C00DCB877900ED939C61C5D1270819
 RUN echo "deb http://www.a9f.eu/apt/apt-current-v1/debian jessie main" > /etc/apt/sources.list.d/apt-current-v1.list
 RUN apt-get -y update 
-RUN apt-get -y install apt-get-current
+RUN apt-get -y install apt-current
 RUN apt-get-current -y install rubygems-integration ruby-dev ruby build-essential rsync
 RUN apt-get-current -y dist-upgrade
 RUN gem install fpm -v 1.4.0
