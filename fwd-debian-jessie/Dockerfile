@@ -7,4 +7,4 @@ RUN apt-get -y update
 RUN apt-get -y install apt-current
 RUN apt-get-current -y install rubygems-integration ruby-dev ruby build-essential rsync
 RUN apt-get-current -y dist-upgrade
-RUN gem install fpm -v 1.4.0
+RUN gem install fpm -v 1.5.0
