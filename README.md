@@ -29,6 +29,11 @@ The build chain goes something like this:
 
 I suggest you just **copy** the whole packaging directory from the examples to your own project, then you add/remove the various distro-related subdirectories and modify them in place.
 
+## Goodies
+
+Debian Jessie, Ubuntu Trusty and Ubuntu Xenial images already include [apt-current](https://github.com/alanfranz/apt-current) for easier
+install and maintenance of images based on apt distributions.
+
 ## Limitations
 
 Currently the images are x86_64 only. There's an exception for
