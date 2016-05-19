@@ -2,6 +2,9 @@
 
 Pre-baked images for RPM and DEB package building. [fpm](https://github.com/jordansissel/fpm) is included!
 
+Centos 5 and 6 images are stuck (and will be probably stuck forever) to fpm 1.4.0 because of system limitations.
+All other images should be updated to the latest FPM version, currently: **1.5.0**.
+
 ## what does this do?
 
 If you don't want to spend your nights in learning packaging an RPM or a DEB - which is a good idea - FPM can help.
