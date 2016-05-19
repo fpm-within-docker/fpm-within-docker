@@ -12,3 +12,4 @@ RUN linux32 yum -y --nogpgcheck localinstall /root/rpmbuild/RPMS/i386/*.rpm
 RUN LD_LIBRARY_PATH=/opt/ruby193/lib linux32 /opt/ruby193/bin/gem install fpm -v 1.4.0
 COPY fpm /usr/bin/
 ADD files/etc/rpm/macros.fwd /etc/rpm/macros.fwd
+RUN yum clean all

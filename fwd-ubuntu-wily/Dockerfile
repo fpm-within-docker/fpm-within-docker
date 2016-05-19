@@ -5,3 +5,4 @@ RUN apt-get -y update
 RUN apt-get -y install ruby rubygems-integration ruby-dev build-essential rsync
 RUN apt-get -y dist-upgrade
 RUN gem install fpm -v 1.5.0
+RUN apt-get clean
