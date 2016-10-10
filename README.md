@@ -34,8 +34,11 @@ I suggest you just **copy** the whole packaging directory from the examples to y
 
 ## Goodies
 
-Debian Jessie, Ubuntu Trusty and Ubuntu Xenial images already include [apt-current](https://github.com/alanfranz/apt-current) for easier
-install and maintenance of images based on apt distributions.
+Debian and Ubuntu images already include [apt-current](https://github.com/alanfranz/apt-current) for easier
+install and maintenance of images based on apt distributions. Please note: apt-current gets configured with **CLEANUP_DOWNLOADED_LISTS=true** by default;
+it is hence recommended that you run apt/apt-get install only once in your build files, or that you change the configuration, otherwise your build
+may be unnecessary slow because of multiple update commands being issues.
+
 
 ## Limitations
 
