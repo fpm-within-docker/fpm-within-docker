@@ -1,0 +1,13 @@
+distro:
+ - fwd-centos-5-i386
+ - fwd-centos-6
+ - fwd-centos-7
+ - fwd-debian-jessie
+ - fwd-debian-wheezy
+ - fwd-fedora-23
+ - fwd-fedora-24
+ - fwd-fedora-rawhide
+ - fwd-ubuntu-precise
+ - fwd-ubuntu-trusty
+ - fwd-ubuntu-xenial
+ - fwd-ubuntu-yakkety
