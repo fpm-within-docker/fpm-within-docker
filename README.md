@@ -67,13 +67,13 @@ Image list:
 * alanfranz/fwd-centos-7:latest
 * alanfranz/fwd-debian-jessie:latest
 * alanfranz/fwd-debian-wheezy:latest
-* alanfranz/fwd-fedora-22:latest
 * alanfranz/fwd-fedora-23:latest
+* alanfranz/fwd-fedora-24:latest
 * alanfranz/fwd-fedora-rawhide:latest
 * alanfranz/fwd-ubuntu-precise:latest
 * alanfranz/fwd-ubuntu-trusty:latest
-* alanfranz/fwd-ubuntu-wily:latest
 * alanfranz/fwd-ubuntu-xenial:latest
+* alanfranz/fwd-ubuntu-yakkety:latest
 
 ## Signing RPMs
 
