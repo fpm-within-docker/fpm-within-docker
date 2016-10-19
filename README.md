@@ -25,10 +25,10 @@ for Centos7 and Ubuntu Trusty. The directory contains the extracted source of lu
 
 The build chain goes something like this:
 
-* first, a build-image is constructed via docker. That usually inherits from an fpm-within-docker image.
-* Then, a build script is run into that image. Such build script can access the software source, which is usually employed to build and install the software; then fpm is invoked to package it.
-* After that, a test-image is constructed via docker. That doesn't inherit from an fpm-within-docker image; an image as bare as possible should be used.
-* As a last step, a test script is invoked. Such script should install the package that was just built and run the test suite for the software, which can then be tested in an environment very close to actual scenario. This is especially useful to detect issues with missing or broken dependencies.
+* first, a build-image is constructed via docker. That usually inherits from an fpm-within-docker image. This image should include whatever is needed to **build** the software - most probably a bunch of *-dev* or *-devel* packages.
+* Then, a build script is run into that image. Such build script can access the software source, which is usually employed to build and install the software, and performs the actual dep fetching/build/whatever; then *fpm* is invoked to package the built software.
+* After that, a test-image is constructed via docker. That doesn't inherit from an fpm-within-docker image; an image as bare as possible should be used, since the dependency checking part is performed in the next step.
+* As a last step, a test script is invoked. Such script should install the package that was just built, should let the package manager install any required dependency, and should run the test suite for the software, which will be tested in an environment very close to actual scenario. This is especially useful to detect issues with missing or broken dependencies.
 
 I suggest you just **copy** the whole packaging directory from the examples to your own project, then you add/remove the various distro-related subdirectories and modify them in place.
 
