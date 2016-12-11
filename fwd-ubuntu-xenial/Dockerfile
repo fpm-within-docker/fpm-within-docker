@@ -8,4 +8,4 @@ RUN apt-get -y install apt-current
 RUN /bin/echo -e "MAXDELTA=3600\nCLEANUP_DOWNLOADED_PACKAGES=\"true\"\nCLEANUP_DOWNLOADED_LISTS=\"true\"\n" > /etc/apt-current.conf
 RUN apt-get-current -y install ruby rubygems-integration ruby-dev build-essential rsync
 RUN apt-get-current -y dist-upgrade
-RUN gem install fpm -v 1.6.3
+RUN gem install fpm -v 1.7.0
