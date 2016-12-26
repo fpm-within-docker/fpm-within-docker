@@ -4,7 +4,7 @@ distro:
  - fwd-centos-7
  - fwd-debian-jessie
  - fwd-debian-wheezy
- - fwd-fedora-23
+ - fwd-fedora-25
  - fwd-fedora-24
  - fwd-fedora-rawhide
  - fwd-ubuntu-precise
