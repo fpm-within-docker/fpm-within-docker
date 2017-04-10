@@ -5,5 +5,5 @@ RUN apt-get -y update
 RUN apt-get -y install ruby1.9.1-full ruby1.9.1-dev build-essential rsync
 RUN apt-get -y dist-upgrade
 RUN gem install json -v 1.8.3
-RUN gem install fpm -v 1.7.0
+RUN gem install fpm -v 1.8.1
 RUN apt-get clean
