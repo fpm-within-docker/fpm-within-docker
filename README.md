@@ -74,6 +74,7 @@ Image list:
 * alanfranz/fwd-ubuntu-trusty:latest
 * alanfranz/fwd-ubuntu-xenial:latest
 * alanfranz/fwd-ubuntu-yakkety:latest
+* alanfranz/fwd-ubuntu-zesty:latest
 
 ## Signing RPMs
 
