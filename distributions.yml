@@ -1,5 +1,4 @@
 distro:
- - fwd-centos-5-i386
  - fwd-centos-6
  - fwd-centos-7
  - fwd-debian-jessie

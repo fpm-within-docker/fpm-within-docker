@@ -62,7 +62,6 @@ as they get out, and I'll try supporting them as long as they're supported upstr
 
 Image list:
 
-* alanfranz/fwd-centos-5-i386:latest
 * alanfranz/fwd-centos-6:latest
 * alanfranz/fwd-centos-7:latest
 * alanfranz/fwd-debian-jessie:latest
