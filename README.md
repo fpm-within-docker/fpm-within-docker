@@ -1,14 +1,3 @@
-# BIG FAT WARNING: image paths are going to change!
-
-In the next months, I'll transition images to a new schema, they'll be availabe with an url like:
-
-```
-alanfranz/fpm-within-docker:centos-7
-alanfranz/fpm-within-docker:ubuntu-trusty
-```
-
-This system will be easier to maintain for me.
-
 # fpm-within-docker
 
 Pre-baked images for RPM and DEB package building. [fpm](https://github.com/jordansissel/fpm) is included!
@@ -63,28 +52,30 @@ I'll add 32 bit images only if help is provided.
 
 They're available on Docker hub, so they can be used straight from your docker command line, without the need of rebuilding them locally.
 
-[fpm-within-docker images on Docker Hub](https://hub.docker.com/search/?isAutomated=0&isOfficial=0&page=1&pullCount=0&q=alanfranz%2Ffwd&starCount=0)
+[fpm-within-docker images on Docker Hub](https://hub.docker.com/r/alanfranz/fpm-within-docker/tags/)
 
-All images are tagged "latest" and are x86_64 unless otherwise noted. i386 images are
-unsupported and experimental.
+All images are are x86_64 only.
 
 I'll usually add images for Centos, Fedora, Ubuntu and Debian as soon
 as they get out, and I'll try supporting them as long as they're supported upstream.
 
-Image list:
+Available images:
 
-* alanfranz/fwd-centos-6:latest
-* alanfranz/fwd-centos-7:latest
-* alanfranz/fwd-debian-jessie:latest
-* alanfranz/fwd-debian-wheezy:latest
-* alanfranz/fwd-fedora-23:latest
-* alanfranz/fwd-fedora-24:latest
-* alanfranz/fwd-fedora-rawhide:latest
-* alanfranz/fwd-ubuntu-precise:latest
-* alanfranz/fwd-ubuntu-trusty:latest
-* alanfranz/fwd-ubuntu-xenial:latest
-* alanfranz/fwd-ubuntu-yakkety:latest
-* alanfranz/fwd-ubuntu-zesty:latest
+```
+alanfranz/fpm-within-docker:centos-6
+alanfranz/fpm-within-docker:centos-7
+alanfranz/fpm-within-docker:fedora-24
+alanfranz/fpm-within-docker:fedora-25
+alanfranz/fpm-within-docker:fedora-rawhide
+alanfranz/fpm-within-docker:debian-jessie
+alanfranz/fpm-within-docker:debian-wheezy
+alanfranz/fpm-within-docker:ubuntu-precise
+alanfranz/fpm-within-docker:ubuntu-trusty
+alanfranz/fpm-within-docker:ubuntu-xenial
+alanfranz/fpm-within-docker:ubuntu-yakkety
+alanfranz/fpm-within-docker:ubuntu-zesty
+```
+
 
 ## Signing RPMs
 
