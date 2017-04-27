@@ -1,3 +1,14 @@
+# BIG FAT WARNING: image paths are going to change!
+
+In the next months, I'll transition images to a new schema, they'll be availabe with an url like:
+
+```
+alanfranz/fpm-within-docker:centos-7
+alanfranz/fpm-within-docker:ubuntu-trusty
+```
+
+This system will be easier to maintain for me.
+
 # fpm-within-docker
 
 Pre-baked images for RPM and DEB package building. [fpm](https://github.com/jordansissel/fpm) is included!
