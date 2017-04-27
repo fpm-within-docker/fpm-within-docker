@@ -1,3 +1,0 @@
-#!/bin/bash
-set -ex
-LD_LIBRARY_PATH=/opt/ruby193/lib /opt/ruby193/bin/fpm "$@"
