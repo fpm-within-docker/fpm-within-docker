@@ -4,7 +4,7 @@
 # to delete them from our host.
 trap 'chown -R --reference /test-inside/test /test-logs/' EXIT
 
-yum -y install /out/*.rpm
+dnf -y install /out/*.rpm
 
 cd /usr/local/lua/tests
 /usr/local/lua/bin/lua -e"_U=true" all.lua 2>&1 | tee /test-logs/lua.log
