@@ -64,8 +64,8 @@ Available images:
 ```
 alanfranz/fpm-within-docker:centos-6
 alanfranz/fpm-within-docker:centos-7
-alanfranz/fpm-within-docker:fedora-24
 alanfranz/fpm-within-docker:fedora-25
+alanfranz/fpm-within-docker:fedora-26
 alanfranz/fpm-within-docker:fedora-rawhide
 alanfranz/fpm-within-docker:debian-jessie
 alanfranz/fpm-within-docker:debian-wheezy
