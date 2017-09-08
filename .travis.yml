@@ -1,0 +1,15 @@
+sudo: required
+
+language: sh
+
+services:
+  - docker
+
+matrix:
+  include:
+    - env: JOB=hadolint
+  allow_failures:
+    - env: JOB=hadolint
+
+script:
+  - if [ "$JOB" == "hadolint" ]; then docker run --rm -v "$PWD:/build" lukasmartinelli/hadolint /build/tests/hadolint.sh; fi
