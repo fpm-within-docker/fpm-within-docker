@@ -1,5 +1,17 @@
 FROM fedora:26
 MAINTAINER Alan Franzoni <username@franzoni.eu>
-RUN dnf clean metadata && dnf -y update && dnf -y install ruby ruby-devel rubygems libffi libffi-devel @"Development Tools" gnupg2 rpm-sign fedora-packager rpmdevtools rsync
-RUN gem install fpm -v 1.8.1
-RUN dnf clean all
+RUN dnf clean metadata \
+ && dnf -y update \
+ && dnf -y install \
+    @"Development Tools" \
+    gnupg \
+    libffi \
+    libffi-devel \
+    rpm-build \
+    rpm-sign \
+    rsync \
+    ruby \
+    ruby-devel \
+    rubygems \
+ && dnf clean all
+RUN gem install --no-ri --no-rdoc fpm -v 1.8.1
