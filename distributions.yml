@@ -1,8 +1,9 @@
 distro:
+ - fwd-debian-stretch
  - fwd-centos-6
  - fwd-centos-7
- - fwd-debian-jessie
  - fwd-debian-wheezy
+ - fwd-debian-jessie
  - fwd-fedora-25
  - fwd-fedora-26
  - fwd-fedora-rawhide
