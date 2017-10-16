@@ -52,6 +52,13 @@ was very tedious, and docker doesn't officially endorse 32 bit guests.
 
 I'll add 32 bit images only if help is provided.
 
+## Signing RPMs
+
+Fpm supports signing rpms, but there's a minimum of setup involved; check the [build for centos 7](example-project/packaging/centos-7/build) to see 
+how it's done. You can both sign and verify the signature is OK.
+
+DEB packages are signed in the repository only, so no issue while building.
+
 ## Using the fpm-within-docker images
 
 They're available on Docker hub, so they can be used straight from your docker command line, without the need of rebuilding them locally.
@@ -82,9 +89,4 @@ alanfranz/fpm-within-docker:ubuntu-zesty
 ```
 
 
-## Signing RPMs
 
-Fpm supports signing rpms, but there's a minimum of setup involved; check the [build for centos 7](example-project/packaging/centos-7/build) to see 
-how it's done. You can both sign and verify the signature is OK.
-
-DEB packages are signed in the repository only, so no issue while building.
