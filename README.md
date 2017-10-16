@@ -88,5 +88,8 @@ alanfranz/fpm-within-docker:ubuntu-yakkety
 alanfranz/fpm-within-docker:ubuntu-zesty
 ```
 
+## Thanks, in no special order
+
+- Kevin Pankonen
 
 
