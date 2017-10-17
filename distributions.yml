@@ -6,7 +6,6 @@ distro:
  - fwd-debian-jessie
  - fwd-fedora-25
  - fwd-fedora-26
- - fwd-fedora-rawhide
  - fwd-ubuntu-precise
  - fwd-ubuntu-trusty
  - fwd-ubuntu-xenial
