@@ -10,4 +10,4 @@ RUN /bin/echo -e "MAXDELTA=3600\nCLEANUP_DOWNLOADED_PACKAGES=\"true\"\nCLEANUP_D
 RUN apt-get-current -y dist-upgrade
 RUN apt-get-current -y install rubygems-integration ruby-dev build-essential rsync
 RUN gem install json -v 1.8.3
-RUN gem install fpm -v 1.8.1
+RUN gem install fpm -v 1.9.3

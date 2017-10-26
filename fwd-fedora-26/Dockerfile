@@ -14,4 +14,4 @@ RUN dnf clean metadata \
     ruby-devel \
     rubygems \
  && dnf clean all
-RUN gem install --no-ri --no-rdoc fpm -v 1.8.1
+RUN gem install --no-ri --no-rdoc fpm -v 1.9.3

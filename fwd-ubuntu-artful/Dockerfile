@@ -2,7 +2,7 @@ FROM ubuntu:artful
 MAINTAINER Alan Franzoni <username@franzoni.eu>
 COPY 80-acquire-retries /etc/apt/apt.conf.d/
 RUN apt-get update && apt-get -y install apt-transport-https curl ruby rubygems-integration ruby-dev build-essential rsync
-RUN gem install fpm -v 1.8.1
+RUN gem install fpm -v 1.9.3
 #RUN curl https://www.franzoni.eu/keys/D401AB61.txt | apt-key add -
 #RUN echo "deb https://dl.bintray.com/alanfranz/apt-current-v1-ubuntu-artful artful main" > /etc/apt/sources.list.d/apt-current-v1.list
 #RUN apt-get -y update

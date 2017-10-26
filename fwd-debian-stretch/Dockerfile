@@ -8,4 +8,4 @@ RUN curl https://www.franzoni.eu/keys/D401AB61.txt | apt-key add -
 #RUN apt-get -y install apt-current
 #RUN /bin/echo -e "MAXDELTA=3600\nCLEANUP_DOWNLOADED_PACKAGES=\"true\"\nCLEANUP_DOWNLOADED_LISTS=\"true\"\n" > /etc/apt-current.conf
 RUN apt-get update && apt-get -y install rubygems-integration ruby-dev ruby build-essential rsync && apt-get -y dist-upgrade
-RUN gem install fpm -v 1.8.1
+RUN gem install fpm -v 1.9.3

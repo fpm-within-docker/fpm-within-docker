@@ -12,5 +12,5 @@ RUN yum clean metadata \
     ruby-devel \
     rubygems \
  && yum clean all
-RUN gem install --no-ri --no-rdoc fpm -v 1.8.1
+RUN gem install --no-ri --no-rdoc fpm -v 1.9.3
 COPY files/etc/rpm/macros.fwd /etc/rpm/macros.fwd
