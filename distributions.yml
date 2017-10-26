@@ -1,13 +1,11 @@
 distro:
- - fwd-debian-stretch
  - fwd-centos-6
  - fwd-centos-7
  - fwd-debian-wheezy
  - fwd-debian-jessie
+ - fwd-debian-stretch
  - fwd-fedora-25
  - fwd-fedora-26
- - fwd-ubuntu-precise
  - fwd-ubuntu-trusty
  - fwd-ubuntu-xenial
- - fwd-ubuntu-yakkety
  - fwd-ubuntu-zesty
