@@ -9,3 +9,4 @@ distro:
  - fwd-ubuntu-trusty
  - fwd-ubuntu-xenial
  - fwd-ubuntu-zesty
+ - fwd-ubuntu-artful
