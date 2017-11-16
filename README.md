@@ -64,7 +64,7 @@ They're available on Docker hub, so they can be used straight from your docker c
 
 [fpm-within-docker images on Docker Hub](https://hub.docker.com/r/alanfranz/fpm-within-docker/tags/)
 
-All images are are x86_64 only.
+All images are are x86_64 only. Please note: some older images may exist on docker hub, but if they're not listed down there, consider them unsupported.
 
 I'll usually add images for Centos, Fedora, Ubuntu and Debian as soon
 as they get out, and I'll try supporting them as long as they're supported upstream.
