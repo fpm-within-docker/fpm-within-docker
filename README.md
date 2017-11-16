@@ -83,8 +83,8 @@ alanfranz/fpm-within-docker:debian-jessie
 alanfranz/fpm-within-docker:debian-stretch
 alanfranz/fpm-within-docker:ubuntu-trusty
 alanfranz/fpm-within-docker:ubuntu-xenial
-alanfranz/fpm-within-docker:ubuntu-artful
 alanfranz/fpm-within-docker:ubuntu-zesty
+alanfranz/fpm-within-docker:ubuntu-artful
 ```
 
 ## Thanks, in no special order
