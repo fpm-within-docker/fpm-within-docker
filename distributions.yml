@@ -4,8 +4,8 @@ distro:
  - fwd-debian-wheezy
  - fwd-debian-jessie
  - fwd-debian-stretch
- - fwd-fedora-25
  - fwd-fedora-26
+ - fwd-fedora-27
  - fwd-ubuntu-trusty
  - fwd-ubuntu-xenial
  - fwd-ubuntu-zesty
