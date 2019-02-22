@@ -4,7 +4,7 @@
 
 Pre-baked images for RPM and DEB package building. [fpm](https://github.com/jordansissel/fpm) is included!
 
-All images should be updated to the latest FPM version, currently: **1.9.3**.
+All images should be updated to the latest FPM version, currently: **1.11.0**.
 
 ## Donate!
 
