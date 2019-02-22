@@ -1,5 +1,7 @@
 # fpm-within-docker
 
+**VERY IMPORTANT NOTICE:** because of time constraints, I'll keep this updated for Centos, Debian and Ubuntu LTS. Fedora and Ubuntu intermediate releases will be dropped.
+
 Pre-baked images for RPM and DEB package building. [fpm](https://github.com/jordansissel/fpm) is included!
 
 All images should be updated to the latest FPM version, currently: **1.9.3**.
