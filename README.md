@@ -64,7 +64,7 @@ DEB packages are signed in the repository only, so no issue while building.
 
 They're available on Docker hub, so they can be used straight from your docker command line, without the need of rebuilding them locally.
 
-[fpm-within-docker images on Docker Hub](https://hub.docker.com/r/alanfranz/fpm-within-docker/tags/)
+[fpm-within-docker images on Docker Cloud](https://cloud.docker.com/repository/docker/alanfranz/fpm-within-docker/tags)
 
 All images are are x86_64 only. Please note: some older images may exist on docker hub, but if they're not listed down there, consider them unsupported.
 
