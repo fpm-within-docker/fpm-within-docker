@@ -8,5 +8,4 @@ distro:
  - fwd-fedora-27
  - fwd-ubuntu-trusty
  - fwd-ubuntu-xenial
- - fwd-ubuntu-zesty
- - fwd-ubuntu-artful
+ - fwd-ubuntu-bionic
