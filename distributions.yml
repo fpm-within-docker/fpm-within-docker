@@ -1,11 +1,8 @@
 distro:
  - fwd-centos-6
  - fwd-centos-7
- - fwd-debian-wheezy
  - fwd-debian-jessie
  - fwd-debian-stretch
- - fwd-fedora-26
- - fwd-fedora-27
  - fwd-ubuntu-trusty
  - fwd-ubuntu-xenial
  - fwd-ubuntu-bionic
