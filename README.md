@@ -76,16 +76,11 @@ Available images:
 ```
 alanfranz/fpm-within-docker:centos-6
 alanfranz/fpm-within-docker:centos-7
-alanfranz/fpm-within-docker:fedora-26
-alanfranz/fpm-within-docker:fedora-27
-alanfranz/fpm-within-docker:fedora-rawhide
-alanfranz/fpm-within-docker:debian-wheezy
 alanfranz/fpm-within-docker:debian-jessie
 alanfranz/fpm-within-docker:debian-stretch
 alanfranz/fpm-within-docker:ubuntu-trusty
 alanfranz/fpm-within-docker:ubuntu-xenial
-alanfranz/fpm-within-docker:ubuntu-zesty
-alanfranz/fpm-within-docker:ubuntu-artful
+alanfranz/fpm-within-docker:ubuntu-bionic
 ```
 
 ## Thanks, in no special order
