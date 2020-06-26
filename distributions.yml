@@ -6,3 +6,4 @@ distro:
  - fwd-ubuntu-trusty
  - fwd-ubuntu-xenial
  - fwd-ubuntu-bionic
+ - fwd-ubuntu-focal

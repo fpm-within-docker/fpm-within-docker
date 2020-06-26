@@ -1,6 +1,6 @@
 # fpm-within-docker
 
-**VERY IMPORTANT NOTICE:** because of time constraints, I'll keep this updated for Centos, Debian and Ubuntu LTS. Fedora and Ubuntu intermediate releases will be dropped.
+**VERY IMPORTANT NOTICE:** because of time constraints, I'll keep this updated for Centos, Debian and Ubuntu LTS. Fedora and Ubuntu intermediate releases will be dropped. If I'm lagging behind, please open a ticket.
 
 Pre-baked images for RPM and DEB package building. [fpm](https://github.com/jordansissel/fpm) is included!
 
@@ -39,11 +39,7 @@ I suggest you just **copy** the whole packaging directory from the examples to y
 
 ## Goodies
 
-Debian and Ubuntu images already include [apt-current](https://github.com/alanfranz/apt-current) for easier
-install and maintenance of images based on apt distributions. Please note: apt-current gets configured with **CLEANUP_DOWNLOADED_LISTS=true** by default;
-it is hence recommended that you run apt/apt-get install only once in your build files, or that you change the configuration, otherwise your build
-may be unnecessary slow because of multiple update commands being issues.
-
+**I don't necessarily include apt-current anymore.**
 
 ## Limitations
 
@@ -64,7 +60,7 @@ DEB packages are signed in the repository only, so no issue while building.
 
 They're available on Docker hub, so they can be used straight from your docker command line, without the need of rebuilding them locally.
 
-[fpm-within-docker images on Docker Cloud](https://cloud.docker.com/repository/docker/alanfranz/fpm-within-docker/tags)
+[fpm-within-docker images on Docker Hub](https://hub.docker.com/r/alanfranz/fpm-within-docker/tags)
 
 All images are are x86_64 only. Please note: some older images may exist on docker hub, but if they're not listed down there, consider them unsupported.
 
@@ -81,6 +77,7 @@ alanfranz/fpm-within-docker:debian-stretch
 alanfranz/fpm-within-docker:ubuntu-trusty
 alanfranz/fpm-within-docker:ubuntu-xenial
 alanfranz/fpm-within-docker:ubuntu-bionic
+alanfranz/fpm-within-docker:ubuntu-focal
 ```
 
 ## Thanks, in no special order
