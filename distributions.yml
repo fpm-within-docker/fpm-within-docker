@@ -1,5 +1,4 @@
 distro:
- - fwd-debian-jessie
  - fwd-debian-stretch
  - fwd-ubuntu-xenial
  - fwd-ubuntu-bionic
@@ -7,3 +6,4 @@ distro:
  # - fwd-centos-6
  # - fwd-centos-7
  # - fwd-ubuntu-trusty
+ # - fwd-debian-jessie
