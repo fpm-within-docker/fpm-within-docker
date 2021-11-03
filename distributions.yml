@@ -5,3 +5,4 @@ distro:
  - fwd-ubuntu-bionic
  - fwd-ubuntu-focal
  - fwd-centos-7
+ - fwd-centos-8
