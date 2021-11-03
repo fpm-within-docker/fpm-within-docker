@@ -1,3 +1,0 @@
-#!/bin/bash -e
-source /opt/rh/rh-ruby24/enable
-/opt/rh/rh-ruby24/root/usr/local/bin/fpm "$@"
