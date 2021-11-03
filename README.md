@@ -54,6 +54,9 @@ I'll add 32 bit images only if help is provided.
 Fpm supports signing rpms, but there's a minimum of setup involved; check the [build for centos 7](example-project/packaging/centos-7/build) to see 
 how it's done. You can both sign and verify the signature is OK.
 
+**WARNING:** I retained some RPM macros that used to be necessary in Centos 6 and 7 in Centos 8, but I haven't actually tested proper signing with
+such distro. If signing fails, please open an issue.
+
 DEB packages are signed in the repository only, so no issue while building.
 
 ## Using the fpm-within-docker images
