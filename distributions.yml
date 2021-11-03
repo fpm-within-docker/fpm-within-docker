@@ -1,6 +1,7 @@
 distro:
- # - fwd-debian-stretch
- # - fwd-ubuntu-xenial
+ - fwd-debian-stretch
+ - fwd-debian-bullseye
+ - fwd-ubuntu-xenial
  - fwd-ubuntu-bionic
  - fwd-ubuntu-focal
  # - fwd-centos-6
