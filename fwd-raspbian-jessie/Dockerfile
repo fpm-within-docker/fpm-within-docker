@@ -9,7 +9,7 @@ RUN apt-get -y install apt-current
 RUN /bin/echo -e "MAXDELTA=3600\nCLEANUP_DOWNLOADED_PACKAGES=\"true\"\nCLEANUP_DOWNLOADED_LISTS=\"false\"\n" > /etc/apt-current.conf
 RUN apt-get-current -y install rubygems-integration ruby-dev ruby build-essential rsync
 RUN apt-get-current -y dist-upgrade
-RUN gem install fpm -v 1.11.0
+RUN gem install fpm -v 1.15.1
 # keep this at the end
 ARG CACHE_EXPIRE=0
 RUN echo ${CACHE_EXPIRE} ; apt-get-current -y dist-upgrade
