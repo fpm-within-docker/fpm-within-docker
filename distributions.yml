@@ -4,5 +4,6 @@ distro:
  - fwd-ubuntu-xenial
  - fwd-ubuntu-bionic
  - fwd-ubuntu-focal
+ - fwd-ubuntu-jammy
  - fwd-centos-7
  - fwd-centos-8
