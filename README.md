@@ -80,6 +80,8 @@ alanfranz/fpm-within-docker:debian-bullseye
 alanfranz/fpm-within-docker:ubuntu-xenial
 alanfranz/fpm-within-docker:ubuntu-bionic
 alanfranz/fpm-within-docker:ubuntu-focal
+alanfranz/fpm-within-docker:ubuntu-jammy
+alanfranz/fpm-within-docker:ubuntu-noble
 ```
 
 ## Thanks, in no special order
