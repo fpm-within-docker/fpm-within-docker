@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        distro-and-version: ["fwd-ubuntu-noble", "fwd-ubuntu-jammy", "fwd-ubuntu-focal", "fwd-debian-bullseye"]
+        distro-and-version: ["fwd-ubuntu-noble", "fwd-ubuntu-jammy", "fwd-ubuntu-focal", "fwd-debian-bullseye", "fwd-debian-bookworm"]
     steps:
       - name: checkout
         uses: actions/checkout@v4
