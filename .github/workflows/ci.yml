@@ -1,0 +1,17 @@
+name: ci
+run-name: test
+on: [push]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        distro-and-version: ["fwd-ubuntu-noble", "fwd-ubuntu-jammy", "fwd-ubuntu-focal"]
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+      - name: build 
+        run: cd ${{ matrix.distro-and-version }} && ./build
+      - name: test
+        run: cd ${{ matrix.distro-and-version }} && ./test/test
