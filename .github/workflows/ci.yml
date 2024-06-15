@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        distro-and-version: ["fedora-40", "rockylinux-9", "ubuntu-noble", "ubuntu-jammy", "ubuntu-focal", "debian-bullseye", "debian-bookworm"]
+        distro-and-version: ["fedora-40", "rockylinux-8", "rockylinux-9", "ubuntu-noble", "ubuntu-jammy", "ubuntu-focal", "debian-bullseye", "debian-bookworm"]
     steps:
       - name: checkout
         uses: actions/checkout@v4
