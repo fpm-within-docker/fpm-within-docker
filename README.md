@@ -73,12 +73,12 @@ as they get out, and I'll try supporting them as long as they're supported upstr
 Available images:
 
 ```
-alanfranz/fpm-within-docker:centos-7
-alanfranz/fpm-within-docker:centos-8
-alanfranz/fpm-within-docker:debian-stretch
+alanfranz/fpm-within-docker:fedora-40
+alanfranz/fpm-within-docker:rockylinux-9
+alanfranz/fpm-within-docker:debian-bookworm
 alanfranz/fpm-within-docker:debian-bullseye
-alanfranz/fpm-within-docker:ubuntu-xenial
-alanfranz/fpm-within-docker:ubuntu-bionic
+alanfranz/fpm-within-docker:ubuntu-noble
+alanfranz/fpm-within-docker:ubuntu-jammy
 alanfranz/fpm-within-docker:ubuntu-focal
 ```
 
