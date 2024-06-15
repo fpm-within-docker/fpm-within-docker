@@ -73,14 +73,14 @@ as they get out, and I'll try supporting them as long as they're supported upstr
 Available images:
 
 ```
-alanfranz/fpm-within-docker:fedora-40
-alanfranz/fpm-within-docker:rockylinux-8
-alanfranz/fpm-within-docker:rockylinux-9
-alanfranz/fpm-within-docker:debian-bookworm
-alanfranz/fpm-within-docker:debian-bullseye
-alanfranz/fpm-within-docker:ubuntu-noble
-alanfranz/fpm-within-docker:ubuntu-jammy
-alanfranz/fpm-within-docker:ubuntu-focal
+docker.io/alanfranz/fpm-within-docker:fedora-40
+docker.io/alanfranz/fpm-within-docker:rockylinux-8
+docker.io/alanfranz/fpm-within-docker:rockylinux-9
+docker.io/alanfranz/fpm-within-docker:debian-bookworm
+docker.io/alanfranz/fpm-within-docker:debian-bullseye
+docker.io/alanfranz/fpm-within-docker:ubuntu-noble
+docker.io/alanfranz/fpm-within-docker:ubuntu-jammy
+docker.io/alanfranz/fpm-within-docker:ubuntu-focal
 ```
 
 Please note that older images can exist on Docker Hub; I don't remove unsupported images when they're no longer built, that's up to you to choose when old is too old. 
