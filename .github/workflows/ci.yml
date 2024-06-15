@@ -15,3 +15,13 @@ jobs:
         run: cd ${{ matrix.distro-and-version }} && ./build
       - name: test
         run: cd ${{ matrix.distro-and-version }} && ./test/test
+      - name: Log in to Docker Hub
+        uses: docker/login-action@f4ef78c080cd8ba55a85445d5b36e214a81df20a
+        with:
+          username: alanfranz
+          password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
+      - name: push Docker image
+        id: push
+        run: |
+          docker tag ${{ matrix.distro-and-version }} docker.io/alanfranz/fpm-within-docker:${{ matrix.distro-and-version }}
+          docker push docker.io/alanfranz/fpm-within-docker:${{ matrix.distro-and-version }} 
