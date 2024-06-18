@@ -54,7 +54,7 @@ I'll add 32 bit images only if help is provided.
 Fpm supports signing rpms, but there's a minimum of setup involved; check the [build for centos 7](example-project/packaging/centos-7/build) to see 
 how it's done. You can both sign and verify the signature is OK.
 
-**WARNING:** I retained some RPM macros that used to be necessary in Centos 6 and 7 in Centos 8, but I haven't actually tested proper signing with
+**WARNING:** I retained some RPM macros that used to be necessary in Centos 6 and 7 in rocky linux 8 and 9, but I haven't actually tested proper signing with
 such distro. If signing fails, please open an issue.
 
 DEB packages are signed in the repository only, so no issue while building.
@@ -67,8 +67,6 @@ They're available on Docker hub, so they can be used straight from your docker c
 
 All images are are x86_64 only. Please note: some older images may exist on docker hub, but if they're not listed down there, consider them unsupported.
 
-I'll usually add images for Centos, Fedora, Ubuntu and Debian as soon
-as they get out, and I'll try supporting them as long as they're supported upstream.
 
 Available images:
 
